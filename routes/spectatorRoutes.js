@@ -17,4 +17,4 @@ router.post('/favorites', spectatorController.addToFavorites);
 
 router.post('/remove-favorited', spectatorController.removeFromFavorites);
 
-module.exports = router;
+module.exports = router
