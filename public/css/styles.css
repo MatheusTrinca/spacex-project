@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+*{
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font: 400 1.8rem/1 'Bebas Neue', cursive;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container{
+  max-width: 1200px;
+}
+
+.card-button{
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  margin: 0 5px;
+  border: 1px solid white;
+  transition: 500ms;
+}
+.card-button:hover{
+  color: #004ea8;
+  background-color: white;
+}
+
+.primary-button{
+  text-align: center;
+  background-color: black;
+  color: white;
+  border: 0;
+  display: block;
+  width: 70%;
+  height: 35px;
+  font-size: 25px;
+  font-family: 'Bebas Neue';
+  line-height: 35px;
+  margin: 15px auto;
+  cursor: pointer;
+  transition: 500ms;
+}
+.primary-button:hover{
+  background-color: #004ea8;
+  color: white;
+}
+
+.secondary-button{
+  border: 1px solid white;
+  text-align: center;
+  background-color: transparent;
+  padding: 2.5px 10px;
+  color: white;
+  font-size: 20px;
+  font-family: 'Bebas Neue';
+  line-height: 35px;
+  cursor: pointer;
+  transition: 500ms;
+}
+.secondary-button:hover{
+  color: #004ea8;
+  background-color: white;
+}
+
+
+header{
+  height: 100vh;
+  background: url('../images/banner2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* NAV */
+
+nav{
+  background-color: black;
+  height: 80px;
+  width: 100%;
+}
+
+.logo img{
+  width: 250px;
+  padding: 20px;
+  margin-left: 20px;
+  
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+nav ul li a.active,nav ul li a:hover{
+  background: #004ea8;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+/* MAIN */
+
+main .feature{
+  color: white;
+  position: absolute;
+  bottom: 7rem;
+  right: 6rem;
+  letter-spacing: 0.1rem;
+}
+
+main .feature p{
+  font-size: 1.5rem;
+}
+
+main .feature a{
+  color: white;
+  border: 1px solid white;
+  padding: 15px;
+  font-size: 1.2rem;
+  transition: 500ms;
+}
+
+main .feature h2{
+  margin: 1.8rem 0 2rem 0;
+  font-size: 4rem;
+}
+
+main .feature a:hover{
+  background-color: white;
+  color: rgb(12, 69, 175);
+}
+
+/* LOGIN */
+.login-card{
+  width: 450px;
+  border: 2px solid rgb(54, 54, 54);
+  border-radius: 20px;
+  margin-top: 80px;
+  padding: 10px 0;
+}
+
+.login-card .title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.login-card .title i{
+  font-size: 40px;
+  color: black;
+  margin-right: 5px;
+}
+
+.login-card .title h4{
+  font-size: 40px;
+  margin-left: 5px;
+}
+
+/* FORM */
+form{
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: -.1rem;
+}
+
+.form-control{
+  width: 100%;
+  display: inline-block;
+  margin: 8px 66px;
+
+}
+
+.form-control label{
+  display: block;
+  line-height: 30px;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.form-control input{
+  height: 35px;
+  width: 70%;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.form-control textarea{
+  height: 80px;
+  width: 70%;
+  font-size: 20px;
+  padding-left: 10px;
+  resize: vertical;
+}
+
+form.log p{
+  margin: 10px 66px;
+  color: black;
+  font-size: 20px;
+}
+ form.log p a {
+   color: brown;
+   margin-left: 5px;
+ }
+
+
+/* LANÇAMENTOS */
+.launches-container{
+  margin-top: 50px;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.launch-card{
+  width: 300px;
+  height: 500px;
+  border-radius: 20px;
+  background: url('/images/launch-background.jpg');
+  background-size: cover;
+  margin: 20px;
+  -webkit-box-shadow: 10px 10px 10px -9px rgba(0,0,0,0.52);
+  -moz-box-shadow: 10px 10px 10px -9px rgba(0,0,0,0.52);
+  box-shadow: 10px 10px 10px -9px rgba(0,0,0,0.52);
+}
+
+.launch-card .info{
+  display: flex;
+  padding: 20px;
+}
+
+.launch-card .info img{
+  height: 400px;
+}
+
+.info .description-container{
+  height: 170px;
+  overflow: auto;
+}
+
+.info .info-text{
+  width: 70%;
+  height: 400px;
+  color: white;
+}
+
+.info-text .launch-title{
+  font-size: 32px;
+  margin: 0;
+}
+
+.info .info-text span{
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.info-text .launch-description{
+  font-family: 'Arial';
+  font-size: 16px;
+  margin: 20px 0;
+
+}
+
+.launch-subtitle{
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.launch-time{
+  margin-bottom: 10px;
+}
+
+.info-text .astronaut-name{
+  font-size: 16px;
+  padding: 2px 0;
+}
+
+.launch-actions{
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form.launch-form-action{
+  margin: 0;
+}
+
+/* MEDIAS */
+
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+  main .feature{
+    bottom: 7rem;
+    right: 3rem;
+  }
+}
+
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 10px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  nav ul li a:hover,nav ul li a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+  main .feature{
+    margin-left: 4rem;
+  }
+}
+
+

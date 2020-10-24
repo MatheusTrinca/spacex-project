@@ -1,0 +1,15 @@
+<nav>
+  <div class="container">
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fa fa-bars"></i>
+    </label>
+    <a href="/" class="logo">
+      <img src="/images/logo.png" alt="Logo SpaceX">
+    </a>
+    <ul>
+      <li><a class="<%= path === '/login' ? 'active' : '' %>" href="/login">Log in</a></li>
+      <li><a class="<%= path === '/signup' ? 'active' : '' %>" href="/login?signup=true">Sign up</a></li>
+    </ul>
+  </div>
+</nav>

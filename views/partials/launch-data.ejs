@@ -1,0 +1,40 @@
+<% launches.forEach(launch => { %>
+  <div class="launch-card">
+    <div class="info">
+      <div class="image">
+        <img src="<%= launch.image %>" alt="Imagem do Foguete">
+      </div>
+      <div class="info-text">
+        <h2 class="launch-title"><%= launch.mission %></h2>
+        <span><%= launch.date %></span>
+        <div class="description-container">
+          <p class="launch-description"><%= launch.description %></p>
+        </div>
+        <h4 class="launch-subtitle">Tempo de Lançamento</h4>
+        <h2 class="launch-time"><%= launch.duration %> min</h2>
+        <h4 class="launch-subtitle">Astronautas</h4>
+        <p class="astronaut-name"><%= launch.astronaut1 %></p>
+        <p class="astronaut-name"><%= launch.astronaut2 %></p>
+      </div>
+    </div>
+    <div class="launch-actions">
+      <% if(editMode) { %>
+        <a class="card-button" href="/admin/admin-launch/<%= launch.id %>?edit=true">Editar</a>
+        <form class="launch-form-action" action="/admin/delete-launch" method="POST">
+          <button type="submit" class="secondary-button">Excluir</button>
+          <input type="hidden" name="id" value="<%= launch.id %>">
+        </form>
+      <% }else if(favoritedMode && !editMode) { %>
+          <form action="/remove-favorited" method="POST">
+            <button class="secondary-button">Remover dos Favoritos</button>
+            <input type="hidden" name="id" value="<%= launch.id %>">
+          </form>
+      <% } else { %>
+          <form action="/favorites" method="POST">
+            <button class="secondary-button">Add aos Favoritos</button>
+            <input type="hidden" name="id" value="<%= launch.id %>">
+          </form>
+      <% } %>   
+    </div>
+  </div>
+<% }) %>

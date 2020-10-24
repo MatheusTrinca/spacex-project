@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head.ejs') %>
+  </head>
+<body>
+  <%- include('../partials/navbar.ejs') %>
+
+  <div class="login-card">
+    <div class="title">
+      <i class="fa fa-rocket"></i>
+      <% if(editMode ) { %>
+      <h4>Editar Lançamento</h4> 
+      <% } else  { %>
+        <h4>Add Lançamento</h4>
+      <% } %>
+    </div>
+    <!-- colocar o action dinamico depois add/editar -->
+    <form action="<% if(editMode) { %> /admin/launches-edit <% }else { %>  /admin/add-launch <% } %>" method="POST">
+      <div class="form-control">
+        <label for="mission">Nome da Missão</label>
+        <input required type="text" name="mission" value="<% if(editMode) { %> <%= launch.mission %>   <% } %>">
+      </div>
+      <div class="form-control">
+        <label for="date">Data de Lançamento</label>
+        <input required type="text" name="date" value="<% if(editMode) { %> <%= launch.date %>   <% } %>">
+      </div>
+      <div class="form-control">
+        <label for="description">Descrição</label>
+        <textarea name="description"><% if(editMode) { %> <%= launch.description %>   <% } %></textarea>
+      </div>
+      <div class="form-control">
+        <label for="duration">Duração do Lançamento</label>
+        <input maxlength="3" required type="text" name="duration" value="<% if(editMode) { %> <%= launch.duration %>   <% } %>">
+      </div>
+      <div class="form-control">
+        <label for="astronaut1">Nome do Astronauta 1</label>
+        <input required type="text" name="astronaut1" value="<% if(editMode) { %> <%= launch.astronaut1 %>   <% } %>">
+      </div>
+      <div class="form-control">
+        <label for="astronaut2">Nome do Astronauta 2</label>
+        <input required type="text" name="astronaut2" value="<% if(editMode) { %> <%= launch.astronaut2 %>   <% } %>">
+      </div>
+      <% if(editMode) { %>
+        <input type="hidden" name="id" value="<%= launch.id %>">
+      <% } %>  
+      <button class="primary-button"><% if(editMode) { %> Editar <% } else { %> Adicionar <% } %></button>
+    </form>
+  </div>
+
+</body>
+</html>
+
+<!-- Continua em 125 -->

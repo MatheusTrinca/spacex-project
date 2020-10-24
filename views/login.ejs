@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head.ejs') %>
+  </head>
+<body>
+  <%- include('./partials/launch-nav.ejs') %>
+
+  <div class="login-card">
+    <div class="title">
+      <i class="fa fa-rocket"></i>
+      <% if(signup) { %>
+        <h4>Cadastro</h4>
+      <% } else { %>
+        <h4>Login</h4>
+      <% } %>  
+    </div>
+    <form class="log" action="<% if(signup) { %> /signup <% } else { %> /login <% } %>" method="POST">
+      <div class="form-control">
+        <label for="email">Email</label>
+        <input type="email" name="email" required>
+      </div>
+      <div class="form-control">
+        <label for="password">Senha</label>
+        <input type="password" name="password" minlength="6" required>
+      </div>
+      <% if(signup) {%>
+        <div class="form-control">
+          <label for="confirmPassword">Confirmar senha</label>
+          <input type="password" name="confirmPassword" minlength="6" required>
+        </div>
+        <button class="primary-button">Cadastrar</button>
+        <p>Já possui cadastro? <a href="/login">Faça login</a></p>
+      <% } else { %>
+        <button class="primary-button">Login</button>
+        <p>Não possui cadastro? <a href="/signup">Cadastre-se</a></p>
+      <% } %>  
+    </form>
+  </div>
+
+</body>
+</html>

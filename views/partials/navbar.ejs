@@ -1,0 +1,17 @@
+<nav>
+  <div class="container">
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fa fa-bars"></i>
+    </label>
+    <a href="/" class="logo">
+      <img src="/images/logo.png" alt="Logo SpaceX">
+    </a>
+    <ul>
+      <li><a class="<%= path === '/launches' ? 'active' : '' %>" href="/launches">Lançamentos</a></li>
+      <li><a class="<%= path === '/favorites' ? 'active' : '' %>" href="/favorites">Favoritos</a></li>
+      <li><a class="<%= path === '/admin/admin-launch' ? 'active' : '' %>" href="/admin/admin-launch">Add Lançamento</a></li>
+      <li><a class="<%= path === '/admin/launches-edit' ? 'active' : '' %>"href="/admin/launches-edit">Editar</a></li>
+    </ul>
+  </div>
+</nav>
